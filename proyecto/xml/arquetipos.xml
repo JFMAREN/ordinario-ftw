@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lista_arquetipos>
+    <arquetipo>
+        <id>1</id>
+        <nombre>Seeker</nombre>
+        <linaje>Buscador</linaje>
+        <fuerza>12</fuerza>
+        <magia>14</magia>
+        <agilidad>15</agilidad>
+        <elemento_debilidad>Fuego</elemento_debilidad>
+        <imagen>seeker.png</imagen>
+        <descripcion>Agente de Rango S balanceado. Se especializa en infligir daño de viento veloz y soporte táctico en el frente de batalla.</descripcion>
+    </arquetipo>
+    <arquetipo>
+        <id>2</id>
+        <nombre>Warrior</nombre>
+        <linaje>Guerrero</linaje>
+        <fuerza>18</fuerza>
+        <magia>6</magia>
+        <agilidad>10</agilidad>
+        <elemento_debilidad>Hielo</elemento_debilidad>
+        <imagen>warrior.png</imagen>
+        <descripcion>Destructor de primera línea. Su altísimo atributo de Fuerza le permite ejecutar ataques de corte crítico demoledores.</descripcion>
+    </arquetipo>
+    <arquetipo>
+        <id>3</id>
+        <nombre>Mage</nombre>
+        <linaje>Mago</linaje>
+        <fuerza>5</fuerza>
+        <magia>20</magia>
+        <agilidad>8</agilidad>
+        <elemento_debilidad>Rayo</elemento_debilidad>
+        <imagen>mage.png</imagen>
+        <descripcion>Especialista elemental a distancia. Capaz de explotar las debilidades mágicas del enemigo mediante descargas destructivas de alta potencia.</descripcion>
+    </arquetipo>
+</lista_arquetipos>

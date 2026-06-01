@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grimorio de Euchronia - Simulador</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <div class="contenedor">
+        <nav class="navbar">
+            <a href="index.html" class="activo">Arquetipos de Grimorio</a>
+            <a href="codice.html">Códice</a>
+            <a href="habilidades.html">Habilidades</a>
+        </nav>
+
+        <h1 class="titulo-seccion">Información del Arquetipo</h1>
+
+        <div class="panel-modular">
+            
+            <div class="tarjeta-perfil">
+                <div class="avatar-marco">
+                    <img id="avatarArquetipo" src="" alt="Arte" style="display: none;">
+                </div>
+                
+                <div id="txtNombreArquetipo" class="nombre-arquetipo-txt">-</div>
+                
+                <select id="selectorArquetipos" style="width: 100%; padding: 10px; background: #222; color: #fff; border: 1px solid #d4af37; margin-top: 15px; font-weight: bold;">
+                    <option value="">Cargando Grimorio...</option>
+                </select>
+            </div>
+
+            <div class="tarjeta-analisis">
+                <h1 class="titulo-seccion" style="margin-top: 0;">Análisis de Combate</h1>
+                
+                <table class="tabla-stats">
+                    <tr><td>Fuerza:</td><td><span id="valFuerza">-</span></td></tr>
+                    <tr><td>Magia:</td><td><span id="valMagia">-</span></td></tr>
+                    <tr><td>Agilidad:</td><td><span id="valAgilidad">-</span></td></tr>
+                    <tr><td>Debilidad:</td><td><span id="valDebilidad" class="txt-rojo">-</span></td></tr>
+                    <tr><td>Rol Estimado:</td><td><span id="valRol" class="txt-cyan">-</span></td></tr>
+                    <tr><td>Prioridad de Turno:</td><td><span id="valPrioridad" class="txt-oro">-</span></td></tr>
+                </table>
+
+                <div id="valDescripcion" class="bloque-descripcion">
+                    Selecciona un Arquetipo del Grimorio para calcular sus especificaciones tácticas de combate.
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/simulador-logica.js"></script>
+</body>
+</html>

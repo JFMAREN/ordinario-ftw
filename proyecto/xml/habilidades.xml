@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lista_habilidades>
+    <habilidad>
+        <nombre>Corte Carmesí</nombre>
+        <tipo>Físico (Corte)</tipo>
+        <costo>10 HP</costo>
+        <descripcion>Ejecuta un tajo vertical cargado con energía cinética de impacto crítico leve.</descripcion>
+    </habilidad>
+    <habilidad>
+        <nombre>Blizz</nombre>
+        <tipo>Mágico (Hielo)</tipo>
+        <costo>12 MP</costo>
+        <descripcion>Invoca ráfagas de escarcha de magla que infligen daño mágico leve de hielo a un enemigo.</descripcion>
+    </habilidad>
+    <habilidad>
+        <nombre>Botas de Viento</nombre>
+        <tipo>Soporte (Buff)</tipo>
+        <costo>18 MP</costo>
+        <descripcion>Modifica dinámicamente los flujos de aire para aumentar la agilidad táctica del grupo.</descripcion>
+    </habilidad>
+</lista_habilidades>
