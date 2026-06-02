@@ -18,4 +18,34 @@
         <costo>18 MP</costo>
         <descripcion>Modifica dinámicamente los flujos de aire para aumentar la agilidad táctica del grupo.</descripcion>
     </habilidad>
+    <habilidad>
+        <nombre>Golpe de Martillo</nombre>
+        <tipo>Físico (Impacto)</tipo>
+        <costo>15 HP</costo>
+        <descripcion>Un golpe contundente que ignora una parte de la defensa física del enemigo.</descripcion>
+    </habilidad>
+    <habilidad>
+        <nombre>Hamma</nombre>
+        <tipo>Mágico (Luz)</tipo>
+        <costo>20 MP</costo>
+        <descripcion>Lanza un haz de energía sagrada que tiene una probabilidad de purificar al objetivo.</descripcion>
+    </habilidad>
+    <habilidad>
+        <nombre>Escudo de Honor</nombre>
+        <tipo>Defensivo</tipo>
+        <costo>15 MP</costo>
+        <descripcion>Reduce el daño recibido por el usuario durante el próximo turno de combate.</descripcion>
+    </habilidad>
+    <habilidad>
+        <nombre>Ráfaga de Puños</nombre>
+        <tipo>Físico (Golpe)</tipo>
+        <costo>12 HP</costo>
+        <descripcion>Serie de ataques rápidos que golpean al enemigo de 2 a 4 veces de forma aleatoria.</descripcion>
+    </habilidad>
+    <habilidad>
+        <nombre>Manto Eléctrico</nombre>
+        <tipo>Mágico (Rayo)</tipo>
+        <costo>16 MP</costo>
+        <descripcion>Descarga estática que daña al enemigo y tiene probabilidad de causar parálisis.</descripcion>
+    </habilidad>
 </lista_habilidades>

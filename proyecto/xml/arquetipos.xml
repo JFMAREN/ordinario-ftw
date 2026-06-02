@@ -33,4 +33,37 @@
         <imagen>mage.png</imagen>
         <descripcion>Especialista elemental a distancia. Capaz de explotar las debilidades mágicas del enemigo mediante descargas destructivas de alta potencia.</descripcion>
     </arquetipo>
+    <arquetipo>
+        <id>4</id>
+        <nombre>Knight</nombre>
+        <linaje>Caballero</linaje>
+        <fuerza>16</fuerza>
+        <magia>8</magia>
+        <agilidad>7</agilidad>
+        <elemento_debilidad>Rayo</elemento_debilidad>
+        <imagen>knight.png</imagen>
+        <descripcion>El baluarte del equipo. Posee una defensa inquebrantable y gran fuerza, aunque su pesada armadura reduce considerablemente su agilidad.</descripcion>
+    </arquetipo>
+    <arquetipo>
+        <id>5</id>
+        <nombre>Healer</nombre>
+        <linaje>Clérigo</linaje>
+        <fuerza>6</fuerza>
+        <magia>17</magia>
+        <agilidad>11</agilidad>
+        <elemento_debilidad>Oscuridad</elemento_debilidad>
+        <imagen>healer.png</imagen>
+        <descripcion>Vital para la supervivencia. Utiliza la magla para restaurar la salud de los aliados y purificar estados alterados en combate.</descripcion>
+    </arquetipo>
+    <arquetipo>
+        <id>6</id>
+        <nombre>Brawler</nombre>
+        <linaje>Luchador</linaje>
+        <fuerza>15</fuerza>
+        <magia>5</magia>
+        <agilidad>18</agilidad>
+        <elemento_debilidad>Viento</elemento_debilidad>
+        <imagen>brawler.png</imagen>
+        <descripcion>Experto en combate cuerpo a cuerpo. Su increíble velocidad le permite conectar múltiples golpes antes de que el enemigo pueda reaccionar.</descripcion>
+    </arquetipo>
 </lista_arquetipos>

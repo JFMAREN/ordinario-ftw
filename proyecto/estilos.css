@@ -206,6 +206,23 @@ h1.titulo-seccion {
     background-color: #1c1c1c;
 }
 
+.boton-inicio {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #d4af37;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    letter-spacing: 2px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.boton-inicio:hover {
+    background-color: #fff;
+    transform: scale(1.05);
+}
+
 
 .txt-rojo { color: #ff4545; font-weight: bold; }
 .txt-cyan { color: #00ffcc; font-weight: bold; }
