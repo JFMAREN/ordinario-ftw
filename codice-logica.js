@@ -1,4 +1,4 @@
-fetch('xml/arquetipos.xml')
+fetch('arquetipos.xml')
     .then(response => response.text())
     .then(data => {
         let parser = new DOMParser();
