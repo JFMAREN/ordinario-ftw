@@ -223,6 +223,104 @@ h1.titulo-seccion {
     transform: scale(1.05);
 }
 
+.titulo-pagina {
+    color: #ffffff;
+    text-transform: uppercase;
+    border-left: 4px solid #ff3344;
+    padding-left: 10px;
+    font-size: 24px;
+}
+
+.descripcion-pagina {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.seccion-filtros {
+    margin-bottom: 25px;
+    text-align: center;
+    background: #0b0c10;
+    padding: 15px;
+    border: 1px solid #333;
+}
+
+.etiqueta-filtro {
+    color: #45f3ff;
+    font-weight: bold;
+    margin-right: 15px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.btn-filtro {
+    padding: 8px 15px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    text-transform: uppercase;
+    transition: background 0.3s;
+}
+
+.btn-filtro:last-child {
+    margin-right: 0;
+}
+
+.btn-todos {
+    background: #45f3ff;
+    color: #000;
+}
+
+.btn-fisico {
+    background: #ff3344;
+    color: #fff;
+}
+
+.btn-magico {
+    background: #d4af37;
+    color: #000;
+}
+
+.tabla-habilidades {
+    width: 100%;
+    border-collapse: collapse;
+    background: #0b0c10;
+    font-size: 15px;
+}
+
+.tabla-habilidades thead tr {
+    border-bottom: 2px solid #45f3ff;
+    text-align: left;
+    color: #45f3ff;
+}
+
+.tabla-habilidades th, 
+.tabla-habilidades td {
+    padding: 12px;
+}
+
+.tabla-habilidades tbody tr {
+    border-bottom: 1px solid #222;
+}
+
+.celda-nombre {
+    font-weight: bold;
+    color: #fff;
+}
+
+.celda-tipo {
+    color: #d4af37;
+}
+
+.celda-costo {
+    color: #ff3344;
+    font-weight: bold;
+}
+
+.celda-desc {
+    color: #ccc;
+}
+
 
 .txt-rojo { color: #ff4545; font-weight: bold; }
 .txt-cyan { color: #00ffcc; font-weight: bold; }

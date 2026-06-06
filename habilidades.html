@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grimorio de Euchronia - Habilidades</title>
+    <title>Drive Discs / Habilidades</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
@@ -11,25 +11,39 @@
     <div class="contenedor">
         <nav class="navbar">
             <a href="index.html">Inicio</a>
-            <a href="simulador.html">Arquetipos de Grimorio</a>
-            <a href="codice.html">Códice</a>
-            <a href="habilidades.html" class="activo">Habilidades</a>
+            <a href="simulador.html">Datos del Agente</a>
+            <a href="codice.html">W-Engines</a>
+            <a href="habilidades.html" class="activo">Drive Discs</a>
         </nav>
 
-        <h1 class="titulo-seccion">Academia de Habilidades</h1>
+        <main>
+            <article>
+                <h1 class="titulo-pagina">Base de Datos de Técnicas de Combate</h1>
+                <p class="descripcion-pagina">
+                    Consulta y clasifica los parámetros operacionales y costos de energía de cada habilidad.
+                </p>
+            </article>
 
-        <table class="tabla-habilidades" id="tablaHabilidades">
-            <thead>
-                <tr>
-                    <th>Nombre de la Técnica</th>
-                    <th>Categoría de Tipo</th>
-                    <th>Costo de Lanzamiento</th>
-                    <th>Descripción de Efecto</th>
-                </tr>
-            </thead>
-            <tbody>
-                </tbody>
-        </table>
+            <section aria-label="Controles de filtrado" class="seccion-filtros">
+                <span class="etiqueta-filtro">Filtrar Tipo:</span>
+                <button onclick="filtrarHabilidades('TODAS')" class="btn-filtro btn-todos">MOSTRAR TODAS</button>
+                <button onclick="filtrarHabilidades('Físico')" class="btn-filtro btn-fisico">SOLO FÍSICO</button>
+                <button onclick="filtrarHabilidades('Mágico')" class="btn-filtro btn-magico">SOLO MÁGICO</button>
+            </section>
+
+            <table class="tabla-habilidades" id="tablaHabilidades">
+                <thead>
+                    <tr>
+                        <th>Técnica</th>
+                        <th>Categoría</th>
+                        <th>Costo</th>
+                        <th>Efecto en Combate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+        </main>
     </div>
 
     <script src="habilidades-logica.js"></script>
