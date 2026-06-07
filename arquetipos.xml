@@ -9,7 +9,7 @@
         <agilidad>15</agilidad>
         <elemento_debilidad>Fuego</elemento_debilidad>
         <imagen>seeker.png</imagen>
-        <descripcion>Agente de Rango S balanceado. Se especializa en infligir daño de viento veloz y soporte táctico en el frente de batalla.</descripcion>
+        <descripcion>Arquetipo balanceado. Se especializa en infligir daño de viento veloz y soporte táctico en el frente de batalla.</descripcion>
     </arquetipo>
     <arquetipo>
         <id>2</id>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Atributos - Wiki Grimorio</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <div class="contenedor">
+        <nav class="navbar">
+            <a href="index.html">Inicio</a>
+            <a href="simulador.html">Datos del Agente</a>
+            <a href="codice.html">Códice</a>
+            <a href="habilidades.html">Habilidades</a>
+            <a href="enciclopedia.html" class="activo">Calculadora Estadísticas</a>
+        </nav>
+
+        <div class="contenido-principal">
+            <main class="contenedor-formulario">
+                <article>
+                    <h1 class="titulo-pagina">Calculadora Dinámica de Arquetipos</h1>
+                    <p class="descripcion-pagina">
+                        Selecciona un arquetipo y ajusta la barra de nivel al deseado. El sistema hara un calculo de los atributos al nivel seleccionado.
+                    </p>
+                </article>
+
+                <form id="formCalculadora">
+                    
+                    <label for="selectAgente" class="etiqueta-campo">Selecciona el Arquetipo:</label>
+                    <select id="selectAgente" class="entrada-texto" required>
+                        <option value="">-- Buscando registros en el Grimorio... --</option>
+                    </select>
+
+                    <label for="rngNivel" class="etiqueta-campo">Nivel Objetivo a Proyectar:</label>
+                    <input type="range" id="rngNivel" min="1" max="60" value="1" class="barra-rango" oninput="outNivel.textContent = this.value">
+                    <div class="indicador-rango">
+                        Nivel del Arquetipo: Rango <span id="outNivel">1</span>
+                    </div>
+
+                    <button type="submit" class="btn-enviar">Calcular Escalado de Datos</button>
+                </form>
+
+                <section id="tarjetaResultado" class="consola-resultado" aria-live="polite">
+                    [SISTEMA EN ESPERA] Define los parámetros del formulario superior para renderizar la proyección de combate.
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="enciclopedia-logica.js"></script>
+</body>
+</html>
