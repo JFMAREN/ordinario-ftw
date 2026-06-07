@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compendio de Aliados - Wiki Metaphor</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <div class="contenedor">
+        <nav class="navbar">
+            <a href="index.html">Inicio</a>
+            <a href="simulador.html">Arquetipos de Grimorio</a>
+            <a href="codice.html">Códice</a>
+            <a href="habilidades.html">Habilidades</a>
+            <a href="enciclopedia.html">Calculadora Estadísticas</a>
+            <a href="personajes.html" class="activo">Aliados del Viaje</a>
+        </nav>
+
+        <div class="contenido-principal">
+            <main>
+                <article>
+                    <h1 class="titulo-pagina">Compendio de Aliados del Reino</h1>
+                    <p class="descripcion-pagina">
+                        Explora el registro de los vínculos y aliados que se unen a la causa para reclamar el trono de Euchronia, indexados desde el archivo XML.
+                    </p>
+                </article>
+
+                <section aria-label="Controles de filtrado de aliados" class="seccion-filtros">
+                    <span class="etiqueta-filtro">Filtrar por Tribu:</span>
+                    <button onclick="filtrarAliados('TODOS')" class="btn-filtro btn-todos">MOSTRAR TODOS</button>
+                    <button onclick="filtrarAliados('Elda')" class="btn-filtro btn-fisico">ELDA</button>
+                    <button onclick="filtrarAliados('Clemar')" class="btn-filtro btn-todos">CLEMAR</button>
+                    <button onclick="filtrarAliados('Rousshinte')" class="btn-filtro btn-magico">ROUSSHINTE</button>
+                </section>
+
+                <table class="tabla-habilidades" id="tablaAliadosMetaphor">
+                    <thead>
+                        <tr>
+                            <th>Retrato</th>
+                            <th>Nombre</th>
+                            <th>Tribu Base</th>
+                            <th>Arquetipo Inicial</th>
+                            <th>Crónica del Vínculo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        </tbody>
+                </table>
+            </main>
+        </div>
+    </div>
+
+    <script src="personajes-logica.js"></script>
+</body>
+</html>

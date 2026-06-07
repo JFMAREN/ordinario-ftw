@@ -66,4 +66,26 @@
         <imagen>brawler.png</imagen>
         <descripcion>Experto en combate cuerpo a cuerpo. Su increíble velocidad le permite conectar múltiples golpes antes de que el enemigo pueda reaccionar.</descripcion>
     </arquetipo>
+    <arquetipo>
+        <id>7</id>
+        <nombre>Thief</nombre>
+        <linaje>Ladrón</linaje>
+        <fuerza>10</fuerza>
+        <magia>8</magia>
+        <agilidad>20</agilidad>
+        <elemento_debilidad>Luz</elemento_debilidad>
+        <imagen>thief.png</imagen>
+        <descripcion>Maestro del subterfugio y el hostigamiento. Posee la Agilidad base más alta, ideal para robar turnos, recursos y aplicar estados alterados letales.</descripcion>
+    </arquetipo>
+    <arquetipo>
+        <id>8</id>
+        <nombre>Masked Dancer</nombre>
+        <linaje>Bailarina Enmascarada</linaje>
+        <fuerza>8</fuerza>
+        <magia>18</magia>
+        <agilidad>14</agilidad>
+        <elemento_debilidad>Físico</elemento_debilidad>
+        <imagen>masked_dancer.png</imagen>
+        <descripcion>Canalizadora táctica versátil. Al cambiar de máscara en batalla, manipula las afinidades elementales del enemigo para crear debilidades artificiales.</descripcion>
+    </arquetipo>
 </lista_arquetipos>

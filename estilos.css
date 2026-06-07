@@ -328,6 +328,23 @@ h1.titulo-seccion {
     padding-left: 20px; 
 }
 
+.celda-avatar-tabla {
+    width: 70px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 8px;
+}
+
+.avatar-personaje-tabla {
+    width: 250px;
+    height: 255px;
+    object-fit: cover; 
+    border: 1px solid #45f3ff; 
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto;
+}
+
 
 .txt-rojo { color: #ff4545; font-weight: bold; }
 .txt-cyan { color: #00ffcc; font-weight: bold; }

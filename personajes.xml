@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lista_personajes>
+    <personaje>
+        <id>p1</id>
+        <nombre>Protagonista</nombre>
+        <tribu>Elda</tribu>
+        <arquetipo_inicial>Seeker</arquetipo_inicial>
+        <imagen>protagonista.png</imagen>
+        <descripcion>Un joven de la tribu Elda, detestada por la religión mayoritaria. Viaja junto a la hada Gallica para romper la maldición que sufre el príncipe heredero.</descripcion>
+    </personaje>
+    <personaje>
+        <id>p2</id>
+        <nombre>Strohl</nombre>
+        <tribu>Clemar</tribu>
+        <arquetipo_inicial>Warrior</arquetipo_inicial>
+        <imagen>strohl.png</imagen>
+        <descripcion>Un joven de la nobleza cuya aldea natal fue devastada por un Humano. Posee un fuerte sentido de la justicia y se une a la milicia estatal.</descripcion>
+    </personaje>
+    <personaje>
+        <id>p3</id>
+        <nombre>Hulkenberg</nombre>
+        <tribu>Rousshinte</tribu>
+        <arquetipo_inicial>Knight</arquetipo_inicial>
+        <imagen>hulkenberg.png</imagen>
+        <descripcion>Una elfa de la guardia real que juró proteger al príncipe. Tras el atentado, vagó consumida por la culpa hasta que se cruza con el Protagonista.</descripcion>
+    </personaje>
+    <personaje>
+        <id>p4</id>
+        <nombre>Heismay</nombre>
+        <tribu>Eugief</tribu>
+        <arquetipo_inicial>Thief</arquetipo_inicial>
+        <imagen>heismay.png</imagen>
+        <descripcion>Un antiguo caballero de la tribu Eugief, caracterizada por sus rasgos de murciélago. Es un estratega experto atormentado por la pérdida de su hijo.</descripcion>
+    </personaje>
+    <personaje>
+        <id>p5</id>
+        <nombre>Junah</nombre>
+        <tribu>Nidias</tribu>
+        <arquetipo_inicial>Masked Dancer</arquetipo_inicial>
+        <imagen>junah.png</imagen>
+        <descripcion>La cantante más famosa del Reino de Euchronia. Detrás de su hermosa voz y su carisma se esconde una agente encubierta con gran lealtad al príncipe.</descripcion>
+    </personaje>
+</lista_personajes>
