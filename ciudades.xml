@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lista_ciudades>
+    <ciudad>
+        <id>c1</id>
+        <nombre>Gran Trad</nombre>
+        <tipo>Capital</tipo>
+        <region>Región Central</region>
+        <imagen>grand_trad.png</imagen>
+        <descripcion>La majestuosa capital del Reino de Euchronia. Una imponente metrópolis fortificada donde se concentran los poderes políticos y religiosos, y donde inicia la carrera por el trono tras el funeral del rey.</descripcion>
+    </ciudad>
+    <ciudad>
+        <id>c2</id>
+        <nombre>Martira</nombre>
+        <tipo>Provincia</tipo>
+        <region>Región de los Lagos</region>
+        <imagen>martira.png</imagen>
+        <descripcion>Conocida como la antigua ciudad fortificada del viejo orden. Es una urbe semiárida famosa por sus tabernas y por albergar una densa población de diversas tribus bajo un ambiente tenso de desconfianza.</descripcion>
+    </ciudad>
+    <ciudad>
+        <id>c3</id>
+        <nombre>Puerto Brilehaven</nombre>
+        <tipo>Portuaria</tipo>
+        <region>Costa Oceánica</region>
+        <imagen>brilehaven.png</imagen>
+        <descripcion>La vibrante y caótica capital marítima del reino. Dividida drásticamente por canales de agua y estatus sociales, este puerto comercial es el punto estratégico de reunión para los aspirantes al trono.</descripcion>
+    </ciudad>
+    <ciudad>
+        <id>c4</id>
+        <nombre>Isla Virga</nombre>
+        <tipo>Sagrada</tipo>
+        <region>Mar de Estrellas</region>
+        <imagen>isla_virga.png</imagen>
+        <descripcion>Una recóndita y misteriosa isla tropical habitada por la tribu Mustari. Considerada tierra sagrada, es inmune a la influencia directa de la Iglesia y resguarda secretos antiguos sobre la magia del reino.</descripcion>
+    </ciudad>
+    <ciudad>
+        <id>c5</id>
+        <nombre>Altabury</nombre>
+        <tipo>Provincia</tipo>
+        <region>Tierras Gélidas</region>
+        <imagen>altabury.png</imagen>
+        <descripcion>Una hermosa pero implacable ciudad construida sobre las laderas de montañas nevadas perpetuas. Es un centro minero e industrial clave, famoso por sus talleres de forja y su clima gélido extremo.</descripcion>
+    </ciudad>
+</lista_ciudades>

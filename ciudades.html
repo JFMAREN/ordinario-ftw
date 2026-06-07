@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciudades del Reino - Wiki Metaphor</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <div class="contenedor">
+        <nav class="navbar">
+            <a href="index.html">Inicio</a>
+            <a href="simulador.html">Arquetipos de Grimorio</a>
+            <a href="codice.html">Códice</a>
+            <a href="habilidades.html">Habilidades</a>
+            <a href="enciclopedia.html">Calculadora Estadísticas</a>
+            <a href="personajes.html">Aliados del Viaje</a>
+            <a href="ciudades.html" class="activo">Ciudades del Reino</a>
+        </nav>
+
+        <div class="contenido-principal">
+            <main>
+                <article>
+                    <h1 class="titulo-pagina">Cartografía de Euchronia: Ciudades</h1>
+                    <p class="descripcion-pagina">
+                        Explora los asentamientos urbanos, fortalezas y locaciones clave del mapa del mundo, indexados de manera asíncrona desde el registro del Surcador.
+                    </p>
+                </article>
+
+                <section aria-label="Controles de filtrado cartográfico" class="seccion-filtros">
+                    <span class="etiqueta-filtro">Categoría de Asentamiento:</span>
+                    <button onclick="filtrarCiudades('TODOS')" class="btn-filtro btn-todos">MOSTRAR REINO</button>
+                    <button onclick="filtrarCiudades('Capital')" class="btn-filtro btn-fisico">CAPITALES</button>
+                    <button onclick="filtrarCiudades('Portuaria')" class="btn-filtro btn-todos">PORTUARIAS</button>
+                    <button onclick="filtrarCiudades('Provincia')" class="btn-filtro btn-magico">PROVINCIAS</button>
+                </section>
+
+                <table class="tabla-habilidades" id="tablaCiudadesMetaphor">
+                    <thead>
+                        <tr>
+                            <th>Vista</th>
+                            <th>Ciudad</th>
+                            <th>Tipo de Zona</th>
+                            <th>Territorio</th>
+                            <th>Crónica Cartográfica</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        </tbody>
+                </table>
+            </main>
+        </div>
+    </div>
+
+    <script src="ciudades-logica.js"></script>
+</body>
+</html>
