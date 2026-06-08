@@ -1,13 +1,14 @@
 class ArquetipoCodiceDTO {
-    constructor(nombre, linaje, imagen) {
+    constructor(nombre, linaje, imagen, orientacion) {
         this.nombre = String(nombre);
         this.linaje = String(linaje);
         this.imagen = String(imagen);
+        this.orientacion = String(orientacion); // Guarda si es 'FISICO' o 'MAGICO'
     }
 }
 
 let cacheArquetiposCodice = [];
-let filtroLinajeActual = "TODOS";
+let filtroOrientacionActual = "TODOS";
 let textoBusquedaActual = "";
 
 fetch('arquetipos.xml')
@@ -23,8 +24,16 @@ fetch('arquetipos.xml')
             let nombre = nodos[i].getElementsByTagName("nombre")[0].textContent;
             let linaje = nodos[i].getElementsByTagName("linaje")[0].textContent;
             let imagen = nodos[i].getElementsByTagName("imagen")[0].textContent;
+            let fuerza = Number(nodos[i].getElementsByTagName("fuerza")[0].textContent);
+            let magia = Number(nodos[i].getElementsByTagName("magia")[0].textContent);
 
-            let arquetipoDto = new ArquetipoCodiceDTO(nombre, linaje, imagen);
+            // Clasificación lógica basada en las especificaciones operacionales de los atributos
+            let orientacion = "FISICO";
+            if (magia > fuerza) {
+                orientacion = "MAGICO";
+            }
+
+            let arquetipoDto = new ArquetipoCodiceDTO(nombre, linaje, imagen, orientacion);
             cacheArquetiposCodice.push(arquetipoDto);
         }
         
@@ -33,14 +42,13 @@ fetch('arquetipos.xml')
     .catch(error => console.error("Error al cargar el Códice desde el XML:", error));
 
 function aplicarFiltrosCombinados() {
-    // 1. Filtrado por Botón de Linaje
+    // Filtrado por Botones de Orientación
     let deBotones = cacheArquetiposCodice;
-    if (filtroLinajeActual !== "TODOS") {
-        deBotones = cacheArquetiposCodice.filter(arq => 
-            arq.linaje.toLowerCase() === filtroLinajeActual.toLowerCase()
-        );
+    if (filtroOrientacionActual !== "TODOS") {
+        deBotones = cacheArquetiposCodice.filter(arq => arq.orientacion === filtroOrientacionActual);
     }
 
+    // Filtrado por cadena de texto ingresada en el Input
     let resultadoFinal = deBotones;
     if (textoBusquedaActual !== "") {
         resultadoFinal = deBotones.filter(arq => 
@@ -71,9 +79,8 @@ function aplicarFiltrosCombinados() {
     renderizarCartasCodice(resultadoFinal);
 }
 
-
-function filtrarPorLinaje(linajeSeleccionado) {
-    filtroLinajeActual = linajeSeleccionado;
+function filtrarPorOrientacion(orientacionSeleccionada) {
+    filtroOrientacionActual = orientacionSeleccionada;
     aplicarFiltrosCombinados();
 }
 
