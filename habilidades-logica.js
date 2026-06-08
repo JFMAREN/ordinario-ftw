@@ -10,7 +10,10 @@ class HabilidadDTO {
 let catalogoHabilidades = [];
 
 fetch('habilidades.xml')
-    .then(response => response.text())
+    .then(response => {
+        if (!response.ok) throw new Error("No se pudo enlazar el archivo habilidades.xml");
+        return response.text();
+    })
     .then(data => {
         let parser = new DOMParser();
         let xmlDoc = parser.parseFromString(data, "text/xml");
@@ -23,16 +26,18 @@ fetch('habilidades.xml')
             let tipo = nodos[i].getElementsByTagName("tipo")[0].textContent;
             let costo = nodos[i].getElementsByTagName("costo")[0].textContent;
             let descripcion = nodos[i].getElementsByTagName("descripcion")[0].textContent;
+            
             let habilidadDto = new HabilidadDTO(nombre, tipo, costo, descripcion);
             catalogoHabilidades.push(habilidadDto);
         }
         
-        renderizarTabla(catalogoHabilidades);
+        renderizarTablaHabilidades(catalogoHabilidades);
     })
     .catch(error => console.error("Error crítico leyendo habilidades.xml:", error));
 
-function renderizarTabla(datos) {
+function renderizarTablaHabilidades(datos) {
     let tbody = document.querySelector("#tablaHabilidades tbody");
+    if (!tbody) return;
     tbody.innerHTML = ""; 
 
     if (datos.length === 0) {
@@ -53,10 +58,12 @@ function renderizarTabla(datos) {
 }
 
 function filtrarHabilidades(categoria) {
-    if (categoria === 'TODAS') {
-        renderizarTabla(catalogoHabilidades);
+    if (categoria === 'TODOS') {
+        renderizarTablaHabilidades(catalogoHabilidades);
     } else {
-        let filtradas = catalogoHabilidades.filter(h => h.tipo.includes(categoria));
-        renderizarTabla(filtradas);
+        let filtradas = catalogoHabilidades.filter(h => 
+            h.tipo.toLowerCase().includes(categoria.toLowerCase())
+        );
+        renderizarTablaHabilidades(filtradas);
     }
 }
