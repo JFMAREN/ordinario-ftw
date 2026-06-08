@@ -1,3 +1,17 @@
+class ArquetipoEnciclopediaDTO {
+    constructor(id, nombre, linaje, fuerza, magia, agilidad, debilidad, imagen, descripcion) {
+        this.id = String(id);
+        this.nombre = String(nombre);
+        this.linaje = String(linaje);
+        this.fuerza = Number(fuerza);
+        this.magia = Number(magia);
+        this.agilidad = Number(agilidad);
+        this.debilidad = String(debilidad);
+        this.imagen = String(imagen);
+        this.descripcion = String(descripcion);
+    }
+}
+
 let arquetiposWiki = [];
 
 fetch('arquetipos.xml')
@@ -11,38 +25,27 @@ fetch('arquetipos.xml')
         let nodos = xmlDoc.getElementsByTagName("arquetipo");
 
         let selector = document.getElementById("selectAgente");
-
         selector.innerHTML = '<option value="">-- Selecciona un Agente --</option>';
 
         for (let i = 0; i < nodos.length; i++) {
             let id = nodos[i].getElementsByTagName("id")[0].textContent;
             let nombre = nodos[i].getElementsByTagName("nombre")[0].textContent;
             let linaje = nodos[i].getElementsByTagName("linaje")[0].textContent;
-            let fuerza = parseInt(nodos[i].getElementsByTagName("fuerza")[0].textContent);
-            let magia = parseInt(nodos[i].getElementsByTagName("magia")[0].textContent);
-            let agilidad = parseInt(nodos[i].getElementsByTagName("agilidad")[0].textContent);
+            let fuerza = nodos[i].getElementsByTagName("fuerza")[0].textContent;
+            let magia = nodos[i].getElementsByTagName("magia")[0].textContent;
+            let agilidad = nodos[i].getElementsByTagName("agilidad")[0].textContent;
             let debilidad = nodos[i].getElementsByTagName("elemento_debilidad")[0].textContent; 
             let imagen = nodos[i].getElementsByTagName("imagen")[0].textContent;
             let descripcion = nodos[i].getElementsByTagName("descripcion")[0].textContent;
-
-            arquetiposWiki.push({ 
-                id, 
-                nombre, 
-                linaje, 
-                fuerza, 
-                magia, 
-                agilidad, 
-                debilidad, 
-                imagen, 
-                descripcion 
-            });
+            let arquetipoDto = new ArquetipoEnciclopediaDTO(id, nombre, linaje, fuerza, magia, agilidad, debilidad, imagen, descripcion);
+            arquetiposWiki.push(arquetipoDto);
 
             let opcion = document.createElement("option");
-            opcion.value = id;
-            opcion.textContent = `${nombre} (${linaje})`;
+            opcion.value = arquetipoDto.id;
+            opcion.textContent = `${arquetipoDto.nombre} (${arquetipoDto.linaje})`;
             selector.appendChild(opcion);
         }
-        console.log("Enciclopedia XML cargada con éxito:", arquetiposWiki);
+        console.log("Enciclopedia XML cargada con éxito mediante DTOs:", arquetiposWiki);
     })
     .catch(error => {
         console.error("Fallo crítico en la enciclopedia:", error);
@@ -72,9 +75,11 @@ document.getElementById("formCalculadora").addEventListener("submit", function(e
         let agilidadProyectada = agente.agilidad + (nivel * 1.5);
 
         tarjeta.innerHTML = `
-            <div class="resultado-agente" style="border: 1px solid #gold; padding: 15px; margin-top: 15px; border-radius: 5px;">
+            <div class="resultado-agente" style="border: 1px solid gold; padding: 15px; margin-top: 15px; border-radius: 5px;">
                 <h3>Proyección de Combate: ${agente.nombre} (${agente.linaje})</h3>
-                <img src="${agente.imagen}" alt="${agente.nombre}" style="width:120px; height:auto; margin: 10px 0;">
+                
+                <img src="${agente.imagen}" alt="Visualización del agente ${agente.nombre} para el cálculo proyectado de atributos de combate" style="width:120px; height:auto; margin: 10px 0;">
+                
                 <p><em>${agente.descripcion}</em></p>
                 <hr style="border-color: #444;">
                 <ul style="list-style: none; padding: 0;">
@@ -90,3 +95,12 @@ document.getElementById("formCalculadora").addEventListener("submit", function(e
         console.error("No se pudo emparejar el ID seleccionado con ningún agente:", idSeleccionado);
     }
 });
+
+const barraNivel = document.getElementById("rngNivel");
+const etiquetaNumero = document.getElementById("lblNivel");
+
+if(barraNivel && etiquetaNumero) {
+    barraNivel.addEventListener("input", function() {
+        etiquetaNumero.textContent = barraNivel.value;
+    });
+}

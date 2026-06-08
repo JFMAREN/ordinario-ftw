@@ -9,17 +9,19 @@
 <body>
 
     <div class="contenedor">
-        <nav class="navbar">
-            <a href="index.html">Inicio</a>
-            <a href="simulador.html">Arquetipos de Grimorio</a>
-            <a href="codice.html">Códice</a>
-            <a href="habilidades.html" class="activo">Habilidades</a>
-            <a href="enciclopedia.html">Calculadora Estadísticas</a>
-            <a href="personajes.html">Aliados del Viaje</a>
-            <a href="ciudades.html">Ciudades del Reino</a>
-        </nav>
+        <header>
+            <nav class="navbar" aria-label="Navegación principal">
+                <a href="index.html">Inicio</a>
+                <a href="simulador.html">Arquetipos de Grimorio</a>
+                <a href="codice.html">Códice</a>
+                <a href="habilidades.html" class="activo">Habilidades</a>
+                <a href="enciclopedia.html">Calculadora Estadísticas</a>
+                <a href="personajes.html">Aliados del Viaje</a>
+                <a href="ciudades.html">Ciudades del Reino</a>
+            </nav>
+        </header>
 
-        <main>
+        <main class="contenido-principal">
             <article>
                 <h1 class="titulo-pagina">Base de Datos de Técnicas de Combate</h1>
                 <p class="descripcion-pagina">
@@ -29,7 +31,7 @@
 
             <section aria-label="Controles de filtrado" class="seccion-filtros">
                 <span class="etiqueta-filtro">Filtrar Tipo:</span>
-                <button onclick="filtrarHabilidades('TODAS')" class="btn-filtro btn-todos">MOSTRAR TODAS</button>
+                <button onclick="filtrarHabilidades('TODOS')" class="btn-filtro btn-todos">MOSTRAR TODAS</button>
                 <button onclick="filtrarHabilidades('Físico')" class="btn-filtro btn-fisico">SOLO FÍSICO</button>
                 <button onclick="filtrarHabilidades('Mágico')" class="btn-filtro btn-magico">SOLO MÁGICO</button>
             </section>
@@ -47,6 +49,10 @@
                     </tbody>
             </table>
         </main>
+
+        <footer style="text-align: center; margin-top: 40px; padding: 20px; border-top: 1px solid #333; color: #666; font-size: 13px;">
+            <p>&copy; 2026 Grimorio de Euchronia - Licenciatura en Ingeniería en Sistemas y Tecnologías de la Información.</p>
+        </footer>
     </div>
 
     <script src="habilidades-logica.js"></script>

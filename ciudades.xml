@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<lista_ciudades>
+<lista_ciudades xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ciudades.xsd">
     <ciudad>
         <id>c1</id>
         <nombre>Gran Trad</nombre>

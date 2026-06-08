@@ -9,47 +9,57 @@
 <body>
 
     <div class="contenedor">
-        <nav class="navbar">
-            <a href="index.html" class="activo">Inicio</a>
-            <a href="simulador.html">Arquetipos de Grimorio</a>
-            <a href="codice.html">Códice</a>
-            <a href="habilidades.html">Habilidades</a>
-            <a href="enciclopedia.html">Calculadora Estadísticas</a>
-            <a href="personajes.html">Aliados del Viaje</a>
-            <a href="ciudades.html">Ciudades del Reino</a>
-        </nav>
-
-        <header style="text-align: center; margin-bottom: 40px;">
-            <h1 style="font-size: 3rem; color: #d4af37; margin-bottom: 10px;">GRIMORIO DE EUCHRONIA</h1>
-            <p style="color: #888; letter-spacing: 1px;">SISTEMA DE ANÁLISIS TÁCTICO PARA ARQUETIPOS</p>
+        <header>
+            <nav class="navbar" aria-label="Navegación principal">
+                <a href="index.html" class="activo">Inicio</a>
+                <a href="simulador.html">Arquetipos de Grimorio</a>
+                <a href="codice.html">Códice</a>
+                <a href="habilidades.html">Habilidades</a>
+                <a href="enciclopedia.html">Calculadora Estadísticas</a>
+                <a href="personajes.html">Aliados del Viaje</a>
+                <a href="ciudades.html">Ciudades del Reino</a>
+            </nav>
         </header>
 
-        <div class="bloque-descripcion" style="margin-bottom: 40px; text-align: center; border-left: none; border-bottom: 3px solid #ff3333;">
-            <p>Bienvenido, portador del Grimorio. Aquí podrás analizar las capacidades de los arquetipos para dominar el campo de batalla en Metaphor: ReFantazio.</p>
-        </div>
+        <main class="contenido-principal">
+            <article class="bienvenida">
+                <h1 class="titulo-pagina">El Grimorio de Euchronia</h1>
+                <p class="descripcion-pagina">
+                    Bienvenido al compendio analítico y sistema de simulación táctica de los hilos de magla del reino. Explora los linajes de combate, las habilidades de los agentes y proyecta sus capacidades en batalla.
+                </p>
+            </article>
 
-        <h1 class="titulo-seccion">Arquetipos Destacados</h1>
-        <div class="grilla-arquetipos">
-            <div class="tarjeta-compendio">
-                <div class="marco-mini"><img src="seeker.png" alt="Seeker"></div>
-                <h3>SEEKER</h3>
-                <p>El Buscador de Caminos</p>
-            </div>
-            <div class="tarjeta-compendio">
-                <div class="marco-mini"><img src="warrior.png" alt="Warrior"></div>
-                <h3>WARRIOR</h3>
-                <p>La Fuerza Bruta</p>
-            </div>
-            <div class="tarjeta-compendio">
-                <div class="marco-mini"><img src="mage.png" alt="Mage"></div>
-                <h3>MAGE</h3>
-                <p>El Maestro de Magla</p>
-            </div>
-        </div>
+            <section aria-label="Arquetipos Destacados del Reino">
+                <h2 class="titulo-seccion">Arquetipos Destacados</h2>
+                <div class="grilla-arquetipos">
+                    <div class="tarjeta-compendio">
+                        <div class="marco-mini">
+                            <img src="seeker.png" alt="Ilustración promocional del arquetipo Seeker, el Buscador de Caminos">
+                        </div>
+                        <h3>SEEKER</h3>
+                        <p>El Buscador de Caminos</p>
+                    </div>
+                    <div class="tarjeta-compendio">
+                        <div class="marco-mini">
+                            <img src="warrior.png" alt="Retrato promocional del arquetipo Warrior, enfocado en daño físico de corte">
+                        </div>
+                        <h3>WARRIOR</h3>
+                        <p>La Fuerza Bruta</p>
+                    </div>
+                    <div class="tarjeta-compendio">
+                        <div class="marco-mini">
+                            <img src="mage.png" alt="Ilustración promocional del arquetipo Mage, especialista en maglas elementales destructivas">
+                        </div>
+                        <h3>MAGE</h3>
+                        <p>El Maestro de Magla</p>
+                    </div>
+                </div>
+            </section>
+        </main>
 
-        <div style="text-align: center; margin-top: 40px;">
-            <a href="index.html" class="boton-inicio">ENTRAR AL SIMULADOR</a>
-        </div>
+        <footer style="text-align: center; margin-top: 40px; padding: 20px; border-top: 1px solid #333; color: #777; font-size: 0.9em;">
+            <p>&copy; 2026 Grimorio de Euchronia - Proyecto Universitario de Tecnologías Web.</p>
+        </footer>
     </div>
 
 </body>

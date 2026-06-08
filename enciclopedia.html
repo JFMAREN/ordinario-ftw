@@ -3,52 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Atributos - Wiki Grimorio</title>
+    <title>Grimorio de Euchronia - Calculadora</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
 
     <div class="contenedor">
-        <nav class="navbar">
-            <a href="index.html">Inicio</a>
-            <a href="simulador.html">Datos del Agente</a>
-            <a href="codice.html">Códice</a>
-            <a href="habilidades.html">Habilidades</a>
-            <a href="enciclopedia.html" class="activo">Calculadora Estadísticas</a>
-            <a href="personajes.html">Aliados del Viaje</a>
-            <a href="ciudades.html">Ciudades del Reino</a>
-        </nav>
+        <header>
+            <nav class="navbar" aria-label="Navegación principal">
+                <a href="index.html">Inicio</a>
+                <a href="simulador.html">Arquetipos de Grimorio</a>
+                <a href="codice.html">Códice</a>
+                <a href="habilidades.html">Habilidades</a>
+                <a href="enciclopedia.html" class="activo">Calculadora Estadísticas</a>
+                <a href="personajes.html">Aliados del Viaje</a>
+                <a href="ciudades.html">Ciudades del Reino</a>
+            </nav>
+        </header>
 
-        <div class="contenido-principal">
-            <main class="contenedor-formulario">
-                <article>
-                    <h1 class="titulo-pagina">Calculadora Dinámica de Arquetipos</h1>
-                    <p class="descripcion-pagina">
-                        Selecciona un arquetipo y ajusta la barra de nivel al deseado. El sistema hara un calculo de los atributos al nivel seleccionado.
-                    </p>
-                </article>
+        <main class="contenido-principal">
+            <article>
+                <h1 class="titulo-pagina">Calculadora de Proyección de Atributos</h1>
+                <p class="descripcion-pagina">
+                    Simula el crecimiento y escalado de los atributos principales de tus agentes conforme aumentan su rango en el Grimorio.
+                </p>
+            </article>
 
-                <form id="formCalculadora">
-                    
-                    <label for="selectAgente" class="etiqueta-campo">Selecciona el Arquetipo:</label>
-                    <select id="selectAgente" class="entrada-texto" required>
-                        <option value="">-- Buscando registros en el Grimorio... --</option>
-                    </select>
-
-                    <label for="rngNivel" class="etiqueta-campo">Nivel Objetivo a Proyectar:</label>
-                    <input type="range" id="rngNivel" min="1" max="60" value="1" class="barra-rango" oninput="outNivel.textContent = this.value">
-                    <div class="indicador-rango">
-                        Nivel del Arquetipo: Rango <span id="outNivel">1</span>
+            <section aria-label="Configuración de la simulación de estadísticas">
+                <form id="formCalculadora" style="background: rgba(0,0,0,0.2); padding: 20px; border-radius: 8px; border: 1px solid #333;">
+                    <div style="margin-bottom: 15px;">
+                        <label for="selectAgente" style="display: block; margin-bottom: 5px; color: gold;">Agente o Arquetipo:</label>
+                        <select id="selectAgente" required style="padding: 8px; width: 100%; max-width: 400px; background: #222; color: #fff; border: 1px solid #555;">
+                            <option value="">-- Selecciona un Agente --</option>
+                        </select>
                     </div>
 
-                    <button type="submit" class="btn-enviar">Calcular Escalado de Datos</button>
-                </form>
+                    <div style="margin-bottom: 20px;">
+                        <label for="rngNivel" style="display: block; margin-bottom: 5px; color: gold;">
+                            Proyección de Rango/Nivel Extra: <span id="lblNivel" style="color: #fff; font-weight: bold; background: #444; padding: 2px 8px; border-radius: 3px; margin-left: 5px;">1</span>
+                        </label>
+                        <input type="range" id="rngNivel" min="1" max="20" value="1" style="width: 100%; max-width: 400px; accent-color: gold;">
+                    </div>
 
-                <section id="tarjetaResultado" class="consola-resultado" aria-live="polite">
-                    [SISTEMA EN ESPERA] Define los parámetros del formulario superior para renderizar la proyección de combate.
-                </section>
-            </main>
-        </div>
+                    <button type="submit" style="padding: 10px 20px; background: gold; color: #111; font-weight: bold; border: none; border-radius: 4px; cursor: pointer;">
+                        Calcular Atributos Proyectados
+                    </button>
+                </form>
+            </section>
+
+            <section aria-label="Resultados del cálculo matemático" id="tarjetaResultado"></section>
+        </main>
+
+        <footer style="text-align: center; margin-top: 40px; padding: 20px; border-top: 1px solid #333; color: #666; font-size: 13px;">
+            <p>&copy; 2026 Grimorio de Euchronia - Licenciatura en Ingeniería en Sistemas y Tecnologías de la Información.</p>
+        </footer>
     </div>
 
     <script src="enciclopedia-logica.js"></script>

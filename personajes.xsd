@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="lista_personajes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="personaje" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" type="xs:string"/>
+              <xs:element name="nombre" type="xs:string"/>
+              <xs:element name="tribu" type="xs:string"/>
+              <xs:element name="arquetipo_inicial" type="xs:string"/>
+              <xs:element name="imagen" type="xs:string"/>
+              <xs:element name="descripcion" type="xs:string"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

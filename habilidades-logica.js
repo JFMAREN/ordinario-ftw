@@ -1,3 +1,12 @@
+class HabilidadDTO {
+    constructor(nombre, tipo, costo, descripcion) {
+        this.nombre = String(nombre);
+        this.tipo = String(tipo);
+        this.costo = String(costo);
+        this.descripcion = String(descripcion);
+    }
+}
+
 let catalogoHabilidades = [];
 
 fetch('habilidades.xml')
@@ -10,12 +19,12 @@ fetch('habilidades.xml')
         catalogoHabilidades = [];
 
         for (let i = 0; i < nodos.length; i++) {
-            catalogoHabilidades.push({
-                nombre: nodos[i].getElementsByTagName("nombre")[0].textContent,
-                tipo: nodos[i].getElementsByTagName("tipo")[0].textContent,
-                costo: nodos[i].getElementsByTagName("costo")[0].textContent,
-                descripcion: nodos[i].getElementsByTagName("descripcion")[0].textContent
-            });
+            let nombre = nodos[i].getElementsByTagName("nombre")[0].textContent;
+            let tipo = nodos[i].getElementsByTagName("tipo")[0].textContent;
+            let costo = nodos[i].getElementsByTagName("costo")[0].textContent;
+            let descripcion = nodos[i].getElementsByTagName("descripcion")[0].textContent;
+            let habilidadDto = new HabilidadDTO(nombre, tipo, costo, descripcion);
+            catalogoHabilidades.push(habilidadDto);
         }
         
         renderizarTabla(catalogoHabilidades);

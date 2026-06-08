@@ -9,19 +9,49 @@
 <body>
 
     <div class="contenedor">
-        <nav class="navbar">
-            <a href="index.html">Inicio</a>
-            <a href="simulador.html">Arquetipos de Grimorio</a>
-            <a href="codice.html" class="activo">Códice</a>
-            <a href="habilidades.html">Habilidades</a>
-            <a href="enciclopedia.html">Calculadora Estadísticas</a>
-            <a href="personajes.html">Aliados del Viaje</a>
-            <a href="ciudades.html">Ciudades del Reino</a>
-        </nav>
+        <header>
+            <nav class="navbar" aria-label="Navegación principal">
+                <a href="index.html">Inicio</a>
+                <a href="simulador.html">Arquetipos de Grimorio</a>
+                <a href="codice.html" class="activo">Códice</a>
+                <a href="habilidades.html">Habilidades</a>
+                <a href="enciclopedia.html">Calculadora Estadísticas</a>
+                <a href="personajes.html">Aliados del Viaje</a>
+                <a href="ciudades.html">Ciudades del Reino</a>
+            </nav>
+        </header>
 
-        <h1 class="titulo-seccion">Compendio General de Arquetipos</h1>
-        
-        <div id="listaCompleta" class="grilla-arquetipos"></div>
+        <main class="contenido-principal">
+            <article>
+                <h1 class="titulo-pagina">Compendio General de Arquetipos</h1>
+                <p class="descripcion-pagina">
+                    Consulta el registro histórico y la clasificación de los linajes de combate disponibles en el Grimorio.
+                </p>
+            </article>
+            
+            <section aria-label="Controles de búsqueda y filtrado de arquetipos" class="seccion-filtros" style="margin-bottom: 25px; padding: 20px; background: #0b0c10; border: 1px solid #333;">
+                
+                <div style="margin-bottom: 15px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px;">
+                    <label for="txtBusquedaArquetipo" class="etiqueta-filtro" style="color: #45f3ff; font-weight: bold; text-transform: uppercase; margin: 0;">Buscar por Nombre:</label>
+                    <input type="text" id="txtBusquedaArquetipo" placeholder="Ej. Seeker, Mage, Knight..." style="padding: 8px 15px; background: #151515; color: #fff; border: 1px solid #d4af37; width: 100%; max-width: 250px; font-weight: bold;">
+                    <div id="consolaValidacion" style="font-size: 14px; font-weight: bold; color: #888;">[Esperando entrada...]</div>
+                </div>
+
+                <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 10px; border-top: 1px solid #222; padding-top: 15px;">
+                    <span class="etiqueta-filtro" style="margin: 0;">Filtrar Linaje:</span>
+                    <button onclick="filtrarPorLinaje('TODOS')" class="btn-filtro btn-todos">MOSTRAR TODOS</button>
+                    <button onclick="filtrarPorLinaje('Inicial')" class="btn-filtro btn-fisico">INICIALES</button>
+                    <button onclick="filtrarPorLinaje('Básico')" class="btn-filtro btn-todos">BÁSICOS</button>
+                    <button onclick="filtrarPorLinaje('Avanzado')" class="btn-filtro btn-magico">AVANZADOS</button>
+                </div>
+            </section>
+            
+            <div id="listaCompleta" class="grilla-arquetipos"></div>
+        </main>
+
+        <footer style="text-align: center; margin-top: 40px; padding: 20px; border-top: 1px solid #333; color: #666; font-size: 13px;">
+            <p>&copy; 2026 Grimorio de Euchronia - Licenciatura en Ingeniería en Sistemas y Tecnologías de la Información.</p>
+        </footer>
     </div>
 
     <script src="codice-logica.js"></script>

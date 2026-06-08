@@ -1,3 +1,17 @@
+class ArquetipoDTO {
+    constructor(id, nombre, linaje, fuerza, magia, agilidad, debilidad, imagen, descripcion) {
+        this.id = String(id);
+        this.nombre = String(nombre);
+        this.linaje = String(linaje);
+        this.fuerza = Number(fuerza);
+        this.magia = Number(magia);
+        this.agilidad = Number(agilidad);
+        this.debilidad = String(debilidad);
+        this.imagen = String(imagen);
+        this.descripcion = String(descripcion);
+    }
+}
+
 let listaArquetipos = [];
 
 fetch('arquetipos.xml')
@@ -14,18 +28,18 @@ fetch('arquetipos.xml')
             let id = nodos[i].getElementsByTagName("id")[0].textContent;
             let nombre = nodos[i].getElementsByTagName("nombre")[0].textContent;
             let linaje = nodos[i].getElementsByTagName("linaje")[0].textContent;
-            let fuerza = parseInt(nodos[i].getElementsByTagName("fuerza")[0].textContent);
-            let magia = parseInt(nodos[i].getElementsByTagName("magia")[0].textContent);
-            let agilidad = parseInt(nodos[i].getElementsByTagName("agilidad")[0].textContent);
+            let fuerza = nodos[i].getElementsByTagName("fuerza")[0].textContent;
+            let magia = nodos[i].getElementsByTagName("magia")[0].textContent;
+            let agilidad = nodos[i].getElementsByTagName("agilidad")[0].textContent;
             let debilidad = nodos[i].getElementsByTagName("elemento_debilidad")[0].textContent;
             let imagen = nodos[i].getElementsByTagName("imagen")[0].textContent;
             let descripcion = nodos[i].getElementsByTagName("descripcion")[0].textContent;
-
-            listaArquetipos.push({ id, nombre, linaje, fuerza, magia, agilidad, debilidad, imagen, descripcion });
+            let arquetipoDto = new ArquetipoDTO(id, nombre, linaje, fuerza, magia, agilidad, debilidad, imagen, descripcion);
+            listaArquetipos.push(arquetipoDto);
 
             let opcion = document.createElement("option");
-            opcion.value = id;
-            opcion.textContent = `${nombre} (${linaje})`;
+            opcion.value = arquetipoDto.id;
+            opcion.textContent = `${arquetipoDto.nombre} (${arquetipoDto.linaje})`;
             selector.appendChild(opcion);
         }
     })

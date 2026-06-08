@@ -1,4 +1,16 @@
+class PersonajeDTO {
+    constructor(id, nombre, tribu, arquetipoInicial, imagen, descripcion) {
+        this.id = String(id);
+        this.nombre = String(nombre);
+        this.tribu = String(tribu);
+        this.arquetipoInicial = String(arquetipoInicial);
+        this.imagen = String(imagen);
+        this.descripcion = String(descripcion);
+    }
+}
+
 let listaAliadosMetaphor = [];
+
 fetch('personajes.xml')
     .then(response => {
         if (!response.ok) throw new Error("No se pudo enlazar el archivo personajes.xml");
@@ -12,20 +24,21 @@ fetch('personajes.xml')
         listaAliadosMetaphor = [];
 
         for (let i = 0; i < nodos.length; i++) {
+            let id = nodos[i].getElementsByTagName("id")[0].textContent;
             let nombre = nodos[i].getElementsByTagName("nombre")[0].textContent;
             let tribu = nodos[i].getElementsByTagName("tribu")[0].textContent;
             let arquetipo = nodos[i].getElementsByTagName("arquetipo_inicial")[0].textContent;
             let imagen = nodos[i].getElementsByTagName("imagen")[0].textContent;
             let descripcion = nodos[i].getElementsByTagName("descripcion")[0].textContent;
-
-            listaAliadosMetaphor.push({ nombre, tribu, arquetipo, imagen, descripcion });
+            let personajeDto = new PersonajeDTO(id, nombre, tribu, arquetipo, imagen, descripcion);
+            listaAliadosMetaphor.push(personajeDto);
         }
         
         renderizarTablaAliados(listaAliadosMetaphor);
     })
     .catch(error => console.error("Error crítico procesando aliados de Euchronia:", error));
 
-    function renderizarTablaAliados(datos) {
+function renderizarTablaAliados(datos) {
     let tbody = document.querySelector("#tablaAliadosMetaphor tbody");
     if (!tbody) return;
     tbody.innerHTML = "";
@@ -43,7 +56,7 @@ fetch('personajes.xml')
                 </td>
                 <td class="celda-nombre">${p.nombre}</td>
                 <td class="celda-tipo">${p.tribu}</td>
-                <td class="celda-costo">${p.arquetipo}</td>
+                <td class="celda-costo">${p.arquetipoInicial}</td>
                 <td class="celda-desc"><em>${p.descripcion}</em></td>
             </tr>
         `;

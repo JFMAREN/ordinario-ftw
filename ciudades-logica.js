@@ -1,3 +1,14 @@
+class CiudadDTO {
+    constructor(id, nombre, tipo, region, imagen, descripcion) {
+        this.id = String(id);
+        this.nombre = String(nombre);
+        this.tipo = String(tipo);
+        this.region = String(region);
+        this.imagen = String(imagen);
+        this.descripcion = String(descripcion);
+    }
+}
+
 let listaCiudadesMetaphor = [];
 
 fetch('ciudades.xml')
@@ -13,13 +24,14 @@ fetch('ciudades.xml')
         listaCiudadesMetaphor = [];
 
         for (let i = 0; i < nodos.length; i++) {
+            let id = nodos[i].getElementsByTagName("id")[0].textContent;
             let nombre = nodos[i].getElementsByTagName("nombre")[0].textContent;
             let tipo = nodos[i].getElementsByTagName("tipo")[0].textContent;
             let region = nodos[i].getElementsByTagName("region")[0].textContent;
             let imagen = nodos[i].getElementsByTagName("imagen")[0].textContent;
             let descripcion = nodos[i].getElementsByTagName("descripcion")[0].textContent;
-
-            listaCiudadesMetaphor.push({ nombre, tipo, region, imagen, descripcion });
+            let ciudadDto = new CiudadDTO(id, nombre, tipo, region, imagen, descripcion);
+            listaCiudadesMetaphor.push(ciudadDto);
         }
 
         renderizarTablaCiudades(listaCiudadesMetaphor);
